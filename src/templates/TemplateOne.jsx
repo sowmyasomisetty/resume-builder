@@ -96,7 +96,7 @@ const TemplateOne = ({ data = {}, theme = {} }) => {
         <h5 className="text-uppercase fw-bold" style={{ color: headingColor }}>Skills</h5>
         <ul className="list-inline">
           {skills.map((s, i) => (
-            <li className="list-inline-item badge bg-primary text-white me-1 mb-1" key={i}>
+            <li className="list-inline-item badge bg-secondary text-dark me-1 mb-1 fs-6 fw-light" key={i}>
               {s.skill || s}
             </li>
           ))}
@@ -108,7 +108,7 @@ const TemplateOne = ({ data = {}, theme = {} }) => {
         <h5 className="text-uppercase fw-bold" style={{ color: headingColor }}>Languages</h5>
         <ul className="list-inline">
           {languages.map((l, i) => (
-            <li className="list-inline-item badge bg-secondary text-white me-1 mb-1" key={i}>
+            <li className="list-inline-item badge bg-secondary text-dark me-1 mb-1 fs-6 fw-light" key={i}>
               {l.language || l}
             </li>
           ))}
@@ -120,7 +120,7 @@ const TemplateOne = ({ data = {}, theme = {} }) => {
         <h5 className="text-uppercase fw-bold" style={{ color: headingColor }}>Hobbies</h5>
         <ul className="list-inline">
           {hobbies.map((h, i) => (
-            <li className="list-inline-item badge bg-info text-dark me-1 mb-1" key={i}>
+            <li className="list-inline-item badge bg-secondary text-dark me-1 mb-1 fs-6 fw-light" key={i}>
               {h.hobby || h}
             </li>
           ))}

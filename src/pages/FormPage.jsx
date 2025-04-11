@@ -13,9 +13,17 @@ const FormPage = () => {
 
   const handleArrayChange = (section, index, field, value) => {
     const updatedSection = [...(formData[section] || [])];
-    updatedSection[index] = { ...updatedSection[index], [field]: value };
+  
+    // Check if section is an array of strings
+    if (['skills', 'languages', 'hobbies'].includes(section)) {
+      updatedSection[index] = value; // Just assign the string directly
+    } else {
+      updatedSection[index] = { ...updatedSection[index], [field]: value }; // For object arrays
+    }
+  
     setFormData(prev => ({ ...prev, [section]: updatedSection }));
   };
+  
 
   const addSectionItem = (section, defaultItem = {}) => {
     setFormData(prev => ({

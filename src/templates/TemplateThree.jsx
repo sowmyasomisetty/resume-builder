@@ -8,6 +8,7 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
     summary = 'Add a professional summary here.',
     experience = [],
     education = [],
+    skills=[],
     projects = [],
     languages = [],
     hobbies = [],
@@ -36,6 +37,8 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
             }}
           />
         )}
+
+        {/* name & email */}
         <div>
           <h2 className="m-0">{name}</h2>
           <p className="m-0">{email}</p>
@@ -47,6 +50,7 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
         <h5 style={{ color: headingColor }} className="fw-bold">Professional Summary</h5>
         <p>{summary}</p>
 
+        {/* experience */}
         <h5 style={{ color: headingColor }} className="fw-bold">Work Experience</h5>
         {experience.map((exp, i) => (
           <div key={i} className="mb-3">
@@ -59,6 +63,7 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
           </div>
         ))}
 
+        {/* projects */}
         <h5 style={{ color: headingColor }} className="fw-bold">Projects</h5>
         <ul>
           {projects.map((proj, i) => (
@@ -74,6 +79,7 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
           ))}
         </ul>
 
+        {/* education */}
         <h5 style={{ color: headingColor }} className="fw-bold">Education</h5>
         {education.map((edu, i) => (
           <div key={i} className="mb-2">
@@ -81,7 +87,13 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
             <p>Percentage: {edu.percentage}%</p>
           </div>
         ))}
+        {/* skills */}
+        <h5 className="text-primary fw-bold">Skills</h5>
+        <ul>
+          {skills.map((s, i) => <li key={i}>{s.skill || s}</li>)}
+        </ul>
 
+        {/* languages */}
         <h5 style={{ color: headingColor }} className="fw-bold">Languages Known</h5>
         <ul>
           {languages.map((l, i) => (
@@ -89,12 +101,14 @@ const TemplateThree = ({ data = {}, theme = {} }) => {
           ))}
         </ul>
 
+        {/* hobbies */}
         <h5 style={{ color: headingColor }} className="fw-bold">Hobbies</h5>
         <ul>
           {hobbies.map((h, i) => (
             <li key={i}>{h.hobby || h}</li>
           ))}
         </ul>
+
       </div>
     </div>
   );
