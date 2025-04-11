@@ -4,7 +4,7 @@ import bgimage from "../assets/resume.jpg"
 
 const Home = () => {
   const backgroundStyle = {
-    backgroundImage: `url(${bgimage})`, // Image should be in public/images/
+    backgroundImage: `url(${bgimage})`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
