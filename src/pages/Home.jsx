@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bgimage from "../assets/resume.jpg"
 
 const Home = () => {
   const backgroundStyle = {
-    backgroundImage: "url('assets/resume.jpg')", // Image should be in public/images/
+    backgroundImage: `url(${bgimage})`, // Image should be in public/images/
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

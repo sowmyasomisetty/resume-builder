@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import bgimg from "../assets/contact.jpg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const ContactUs = () => {
   };
 
   const backgroundStyle = {
-    backgroundImage: "url('src/assets/contact.jpg')", 
+    backgroundImage: `url(${bgimg})`, 
     backgroundSize: "cover",
     backgroundPosition: "center",
     minHeight: "100vh",
