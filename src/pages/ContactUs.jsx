@@ -1,5 +1,5 @@
-// src/pages/ContactUs.jsx
 import React, { useState } from "react";
+import bgimg from "../assets/contact.jpg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,17 +21,13 @@ const ContactUs = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
-
   const backgroundStyle = {
-    backgroundImage: "url('/images/contact.jpg')", // ✅ points to public folder
+    backgroundImage: `url(${bgimg})`, 
     backgroundSize: "cover",
     backgroundPosition: "center",
     minHeight: "100vh",
     color: "#fff",
     padding: "80px 20px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
   };
 
   const inputStyle = {
@@ -40,15 +36,19 @@ const ContactUs = () => {
     color: "#fff",
   };
 
+  const placeholderStyle = {
+    color: "rgba(255, 255, 255, 0.7)",
+  };
+
   return (
     <div style={backgroundStyle}>
-      <div className="container" style={{ maxWidth: "600px", backgroundColor: "rgba(0, 0, 0, 0.5)", padding: "30px", borderRadius: "10px" }}>
+      <div className="container d-flex flex-column align-items-center justify-content-center">
         <h1 className="text-center mb-3" style={{ fontWeight: 'bold', color: '#00f5d4' }}>Contact Us</h1>
-        <p className="text-center mb-4">
+        <p className="text-center mb-4" style={{ maxWidth: "600px" }}>
           We'd love to hear from you! Fill out the form below or reach out to us directly.
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ maxWidth: "600px", width: "100%" }}>
           <div className="mb-3">
             <label className="form-label">Your Name</label>
             <input
