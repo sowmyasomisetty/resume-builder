@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   const backgroundStyle = {
-    backgroundImage: "url('src/assets/resume.jpg')", // Image should be in public/images/
+    backgroundImage: "url('assets/resume.jpg')", // Image should be in public/images/
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
