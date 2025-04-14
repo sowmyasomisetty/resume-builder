@@ -1,4 +1,3 @@
-// components/ResumeBuilder.jsx
 import React, { useState } from 'react';
 import ResumeForm from './ResumeForm';
 import ResumePreview from './ResumePreview';

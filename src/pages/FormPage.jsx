@@ -118,10 +118,12 @@ const FormPage = () => {
                 value={exp.company || ''} onChange={e => handleArrayChange('experience', index, 'company', e.target.value)} />
               <input placeholder="Title" className="form-control mb-2"
                 value={exp.title || ''} onChange={e => handleArrayChange('experience', index, 'title', e.target.value)} />
-              <input placeholder="From - To" className="form-control mb-2"
-                value={exp.duration || ''} onChange={e => handleArrayChange('experience', index, 'duration', e.target.value)} />
-              <textarea placeholder="Achievements" className="form-control mb-2"
-                value={exp.achievements || ''} onChange={e => handleArrayChange('experience', index, 'achievements', e.target.value)} />
+              <input placeholder="From (e.g. Jan 2020)" className="form-control mb-2"
+                value={exp.from || ''} onChange={e => handleArrayChange('experience', index, 'from', e.target.value)} />
+              <input placeholder="To (e.g. Dec 2021 or Present)" className="form-control mb-2"
+                value={exp.to || ''} onChange={e => handleArrayChange('experience', index, 'to', e.target.value)} />
+              <textarea placeholder="Achievements/Tasks" className="form-control mb-2"
+                value={exp.tasks || ''} onChange={e => handleArrayChange('experience', index, 'tasks', e.target.value)} />
               <button type="button" className="btn btn-danger" onClick={() => removeSectionItem('experience', index)}>Remove</button>
             </div>
           ))}
@@ -132,13 +134,15 @@ const FormPage = () => {
           {(formData.projects || []).map((proj, index) => (
             <div key={index} className="border p-3 mb-3 col-4">
               <input placeholder="Project Title" className="form-control mb-2"
-                value={proj.title || ''} onChange={e => handleArrayChange('projects', index, 'title', e.target.value)} />
-              <input placeholder="From - To" className="form-control mb-2"
-                value={proj.duration || ''} onChange={e => handleArrayChange('projects', index, 'duration', e.target.value)} />
+                value={proj.projectName || ''} onChange={e => handleArrayChange('projects', index, 'projectName', e.target.value)} />
+              <input placeholder="From (e.g. Jan 2020)" className="form-control mb-2"
+                value={proj.from || ''} onChange={e => handleArrayChange('projects', index, 'from', e.target.value)} />
+              <input placeholder="To (e.g. Dec 2021 or Present)" className="form-control mb-2"
+                value={proj.to || ''} onChange={e => handleArrayChange('projects', index, 'to', e.target.value)} />
               <textarea placeholder="Description" className="form-control mb-2"
                 value={proj.description || ''} onChange={e => handleArrayChange('projects', index, 'description', e.target.value)} />
               <input placeholder="URL" className="form-control mb-2"
-                value={proj.url || ''} onChange={e => handleArrayChange('projects', index, 'url', e.target.value)} />
+                value={proj.projectUrl || ''} onChange={e => handleArrayChange('projects', index, 'projectUrl', e.target.value)} />
               <button type="button" className="btn btn-danger" onClick={() => removeSectionItem('projects', index)}>Remove</button>
             </div>
           ))}
