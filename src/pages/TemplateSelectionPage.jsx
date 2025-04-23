@@ -12,9 +12,9 @@ const TemplateSelectionPage = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Select a Resume Template</h2>
-      <div className="d-flex gap-3 mt-4">
+    <div className="container mt-5 pt-5">
+      <h2 className="mb-4">Select a Resume Template</h2>
+      <div className="d-flex flex-wrap gap-3">
         <button className="btn btn-outline-primary" onClick={() => handleTemplateSelect('one')}>
           Fresher Template
         </button>

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  // centered navbar
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div className="container-fluid d-flex align-items-center">
       <Link className="navbar-brand text-primary fw-bold me-auto" to="/">Resume Builder</Link>
       <div className="d-flex justify-content-center mx-auto">

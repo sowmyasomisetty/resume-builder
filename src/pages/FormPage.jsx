@@ -50,7 +50,7 @@ const FormPage = () => {
         <form onSubmit={handleSubmit}>
 
           {/* Basic Info */}
-          <div className="mb-3 col-4">
+          <div className="mb-3 mt-4 col-4">
             <label>Name:</label>
             <input
               type="text"

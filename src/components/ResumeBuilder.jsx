@@ -4,7 +4,8 @@ import ResumePreview from './ResumePreview';
 
 const ResumeBuilder = () => {
   const [formData, setFormData] = useState({
-    name: '',email: '',
+    name: '',
+    email: '',
     phone: '',
     summary: '',
     profilePhoto: null,

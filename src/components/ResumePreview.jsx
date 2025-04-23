@@ -18,7 +18,7 @@ const ResumePreview = ({ selectedTemplate, data, theme }) => {
   };
 
   return (
-    <div className="resume-preview border p-3 rounded mt-3 bg-white">
+    <div className="resume-preview border p-3 rounded mt-5 bg-white">
       <div className="row">
         <div className="col-12">{renderTemplate()}</div>
       </div>
